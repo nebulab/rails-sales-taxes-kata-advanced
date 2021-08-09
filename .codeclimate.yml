@@ -3,3 +3,15 @@ plugins:
     enabled: true
     config: .rubocop.yml
     channel: rubocop-1-12-1
+exclude_patterns:
+  - "tests/"
+  - "*.js"
+  - "bin/*"
+  - "config/"
+  - "vendor/**/*"
+  - "**/vendor/**/*"
+  - "**/templates/**/*"
+  - "*.js"
+  - "app/channels/*"
+  - "coverage/"
+  - "db/"

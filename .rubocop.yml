@@ -3,11 +3,17 @@ require:
 
 AllCops:
   Exclude:
-    - 'bin/*'
-    - 'config/environments/*'
-    - 'vendor/**/*'
-    - '**/vendor/**/*'
-    - '**/templates/**/*'
+    - "tests/"
+    - "*.js"
+    - "bin/*"
+    - "config/"
+    - "vendor/**/*"
+    - "**/vendor/**/*"
+    - "**/templates/**/*"
+    - "*.js"
+    - "app/channels/*"
+    - "coverage/"
+    - "db/"
   TargetRubyVersion: 2.7
 
 # We use class vars and will have to continue doing so for compatability
