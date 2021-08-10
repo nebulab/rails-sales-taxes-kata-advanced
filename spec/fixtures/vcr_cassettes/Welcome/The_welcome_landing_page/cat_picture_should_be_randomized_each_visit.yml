@@ -1,0 +1,135 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.thecatapi.com/v1/images/search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.thecatapi.com
+      X-Api-Key:
+      - "<DONT_USE_MY_API_KEY>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Vary:
+      - Origin
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      Last-Modified:
+      - Tue Aug 10 2021 17:55:10 GMT+0000 (Coordinated Universal Time)
+      Cache-Control:
+      - post-check=0, pre-check=0
+      Pagination-Count:
+      - '10418'
+      Pagination-Page:
+      - '0'
+      Pagination-Limit:
+      - '1'
+      Access-Control-Expose-Headers:
+      - Pagination-Count, Pagination-Page, Pagination-Limit
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Response-Time:
+      - 130ms
+      X-Cloud-Trace-Context:
+      - b92aeb896b3c807b94c98f2e8e86b24d
+      Date:
+      - Tue, 10 Aug 2021 17:55:10 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '113'
+    body:
+      encoding: UTF-8
+      string: '[{"breeds":[],"id":"HbtnNyvx-","url":"https://cdn2.thecatapi.com/images/HbtnNyvx-.jpg","width":259,"height":194}]'
+  recorded_at: Tue, 10 Aug 2021 17:55:10 GMT
+- request:
+    method: get
+    uri: https://api.thecatapi.com/v1/images/search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.thecatapi.com
+      X-Api-Key:
+      - "<DONT_USE_MY_API_KEY>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Vary:
+      - Origin
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      Last-Modified:
+      - Tue Aug 10 2021 17:55:10 GMT+0000 (Coordinated Universal Time)
+      Cache-Control:
+      - post-check=0, pre-check=0
+      Pagination-Count:
+      - '10418'
+      Pagination-Page:
+      - '0'
+      Pagination-Limit:
+      - '1'
+      Access-Control-Expose-Headers:
+      - Pagination-Count, Pagination-Page, Pagination-Limit
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Response-Time:
+      - 133ms
+      X-Cloud-Trace-Context:
+      - 0e4d25c54fd976e3aeff5c22414809a0
+      Date:
+      - Tue, 10 Aug 2021 17:55:10 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '103'
+    body:
+      encoding: UTF-8
+      string: '[{"breeds":[],"id":"41n","url":"https://cdn2.thecatapi.com/images/41n.jpg","width":2048,"height":1530}]'
+  recorded_at: Tue, 10 Aug 2021 17:55:10 GMT
+recorded_with: VCR 6.0.0
