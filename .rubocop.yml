@@ -6,7 +6,7 @@ AllCops:
     - "tests/"
     - "*.js"
     - "bin/*"
-    - "config/"
+    - "config/**/*"
     - "vendor/**/*"
     - "**/vendor/**/*"
     - "**/templates/**/*"

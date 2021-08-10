@@ -33,9 +33,32 @@ gem 'rubocop-rails', '>=2.0', require: false
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
+# User model generation with Devise
+gem 'devise', '~> 4.5'
+gem 'figaro'
+gem 'bootstrap-sass'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  # Creates objects to assist with testing/development
+  gem 'factory_bot_rails'
+  gem 'launchy'
+  # Additional matchers for model testing
+  gem 'shoulda-matchers'
+  # Code coverage aggregator for to determine throughness of code
+  gem 'simplecov'
+end
+
+group :test do
+  # Assists in testing user interactions with the application
+  gem 'capybara'
+  # additional methods to assist in testing display order
+  gem 'orderly'
+  # Test suite will be performed with RSpec
+  gem 'rspec-rails'
+  gem 'webmock'
+  gem 'vcr'
 end
 
 group :development do

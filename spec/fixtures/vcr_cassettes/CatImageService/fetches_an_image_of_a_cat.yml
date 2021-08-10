@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.thecatapi.com/v1/images/search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.thecatapi.com
+      X-Api-Key:
+      - "<DONT_USE_MY_API_KEY>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Vary:
+      - Origin
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      Last-Modified:
+      - Tue Aug 10 2021 18:33:05 GMT+0000 (Coordinated Universal Time)
+      Cache-Control:
+      - post-check=0, pre-check=0
+      Pagination-Count:
+      - '10418'
+      Pagination-Page:
+      - '0'
+      Pagination-Limit:
+      - '1'
+      Access-Control-Expose-Headers:
+      - Pagination-Count, Pagination-Page, Pagination-Limit
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Response-Time:
+      - 134ms
+      X-Cloud-Trace-Context:
+      - 5770b4b546ddc95108d6a2816b7510e5
+      Date:
+      - Tue, 10 Aug 2021 18:33:05 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '101'
+    body:
+      encoding: UTF-8
+      string: '[{"breeds":[],"id":"d86","url":"https://cdn2.thecatapi.com/images/d86.jpg","width":320,"height":240}]'
+  recorded_at: Tue, 10 Aug 2021 18:33:05 GMT
+recorded_with: VCR 6.0.0
