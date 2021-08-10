@@ -35,6 +35,8 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 # User model generation with Devise
 gem 'devise', '~> 4.5'
+gem 'figaro'
+gem 'bootstrap-sass'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -55,6 +57,8 @@ group :test do
   gem 'orderly'
   # Test suite will be performed with RSpec
   gem 'rspec-rails'
+  gem 'webmock'
+  gem 'vcr'
 end
 
 group :development do
