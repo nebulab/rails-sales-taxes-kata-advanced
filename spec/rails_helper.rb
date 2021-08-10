@@ -74,4 +74,13 @@ RSpec.configure do |config|
       with.library :rails
     end
   end
+  VCR.configure do |c|
+    c.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
+    c.hook_into :webmock
+    c.filter_sensitive_data('<DONT_USE_MY_API_KEY>') { ENV['CAT_API_KEY'] }
+    c.configure_rspec_metadata! # this allows us to use the :vcr syntax
+    c.before_record do |i|
+      i.response.body.force_encoding('UTF-8')
+    end
+  end
 end
