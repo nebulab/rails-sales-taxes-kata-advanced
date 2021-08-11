@@ -17,17 +17,15 @@ RSpec.feature 'Welcome Page' do
     end
 
     describe 'When logged in' do
-      before do
-        @user = FactoryBot.create(:user)
-        sign_in(@user)
-      end
+      let(:user) { FactoryBot.create(:user) }
+      before { sign_in(user) }
 
       it 'Links change to user dropdown menus and basket links elements' do
         visit root_path
         expect(page).to have_link('Account', href: '#')
         expect(page).to have_link('Log out', href: destroy_user_session_path)
-        expect(page).to have_link('Profile', href: edit_user_registration_path(@user.id))
-        expect(page).to have_link('My Baskets', href: '#')
+        expect(page).to have_link('Profile', href: edit_user_registration_path(user.id))
+        expect(page).to have_link('My Baskets', href: baskets_path)
         expect(page).to_not have_link("Log in", href: new_user_session_path)
         expect(page).to_not have_link("Sign up now!", href: new_user_registration_path)
       end
