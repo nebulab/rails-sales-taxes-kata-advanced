@@ -5,7 +5,11 @@
     This is the home page for the Basket Reader App.
     To get started, log in or click the link below to sign up for an account!
   </h2>
-    <p><%= image_tag CatImageService.get_image, alt: 'cat' %><p>
+    <section><%= image_tag CatImageService.get_image, alt: 'cat' %></section>
 
-  <%= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary" %>
+  <% if user_signed_in? %>
+    <%= link_to "My Baskets", '#', class: "btn btn-lg btn-primary" %>
+  <% else %>
+    <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-lg btn-primary" %>
+  <% end %>
 </div>
