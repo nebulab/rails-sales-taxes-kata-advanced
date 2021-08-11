@@ -23,10 +23,10 @@ RSpec.feature 'Baskets Index Page' do
     end
 
     it 'should delete a basket if I click on the "Delete Basket" link' do
-      delete_link = find('.basket-row', text: user.baskets.first.name)
-      click_link delete_link
-      expect(page).to have_selector('.alert', text: 'Basket was successfully deleted.')
-      expect(page).to_not have_selector('.basket-row', text: user.baskets.first.name)
+      user_basket_count = user.baskets.count
+      find('.basket-row', match: :first).click_link('Delete Basket')
+      expect(user.baskets.count).to eq(user_basket_count - 1)
+      expect(page).to have_selector('.basket-row', count: user_basket_count - 1)
     end
   end
 

@@ -6,4 +6,11 @@ class BasketsController < ApplicationController
   def index
     @baskets = current_user.baskets.order(created_at: :desc)
   end
+
+  def destroy
+    @basket = Basket.find(params[:id])
+    @basket.destroy
+    flash[:alert] = "Basket was successfully deleted."
+    redirect_to baskets_path
+  end
 end
