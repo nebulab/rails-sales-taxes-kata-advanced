@@ -13,7 +13,7 @@ AllCops:
     - "*.js"
     - "app/channels/*"
     - "coverage/"
-    - "db/"
+    - "db/**/*"
   TargetRubyVersion: 2.7
 
 # We use class vars and will have to continue doing so for compatability
