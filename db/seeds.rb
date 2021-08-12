@@ -13,9 +13,11 @@ categories.each do |category|
   ItemCategory.find_or_create_by(name: category)
 end
 
-line_item_descriptions = {'book' => 'Book', 'chocolate bar' => 'Food',
-                          'music CD' => 'Others', 'box of chocolates' => 'Food',
-                          'bottle of perfume' => 'Others', 'headache pills' => 'Medicine'
+line_item_descriptions = {'book' => 'Book',
+                          'music CD' => 'Others',
+                          'chocolate' => 'Food',
+                          'perfume' => 'Others',
+                          'pills' => 'Medicine'
 }
 
 line_item_descriptions.each do |line_item_description, category|
