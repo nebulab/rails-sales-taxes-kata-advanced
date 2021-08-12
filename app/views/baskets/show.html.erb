@@ -1,3 +1,4 @@
+<% provide(:title, "Basket Receipt") %>
 <p>
   <%= "Receipt for basket: #{@basket.name}" %> <br>
   <% @receipt.line_items.each do |line_item| %>
