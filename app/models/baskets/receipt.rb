@@ -2,7 +2,7 @@
 
 module Baskets
   class Receipt
-    attr_reader :sales_tax, :total
+    attr_reader :sales_tax, :total, :line_items
 
     def initialize(basket)
       @basket = basket
