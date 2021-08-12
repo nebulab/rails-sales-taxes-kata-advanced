@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
 class LineItem < ApplicationRecord
-  before_save :set_category
-  belongs_to :basket
+  before_validation :set_category
+
+  belongs_to :basket, optional: true
+  belongs_to :item_category
 
   validates :quantity, numericality: {
     only_integer: true,
@@ -15,6 +17,8 @@ class LineItem < ApplicationRecord
   private
 
   def set_category
-    self.item_category = LineItems::ItemCategory.delegate_category(description)
+    return if item_category.present?
+
+    self.item_category = LineItem.select { |line_item| description&.include?(line_item.description) }&.first&.item_category
   end
 end

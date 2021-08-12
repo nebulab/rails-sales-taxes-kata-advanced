@@ -9,7 +9,7 @@ RSpec.describe LineItem do
   end
 
   describe 'relationships' do
-    it { should belong_to :basket }
+    it { should belong_to(:basket).optional }
   end
 
   describe 'set_category' do
@@ -18,7 +18,7 @@ RSpec.describe LineItem do
       line_item = BasketReader.line_item('1 book at 12.49')
       expect(line_item.item_category).to eq(nil)
       basket.line_items << line_item
-      expect(line_item.item_category).to eq('Book')
+      expect(line_item.item_category.name).to eq('Book')
     end
   end
 end
