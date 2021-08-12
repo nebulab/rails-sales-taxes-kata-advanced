@@ -10,11 +10,11 @@ class Taxes
   end
 
   def standard_tax
-    @item.item_category == "Other" ? 0.1 : 0
+    @item.item_category.name == "Others" ? 0.1 : 0
   end
 
   def import_tax
-    @item.description.downcase.include?("import") ? 0.05 : 0
+    @item.description.downcase.include?("imported") ? 0.05 : 0
   end
 
   def calculated_taxes

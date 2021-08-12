@@ -8,13 +8,13 @@ FactoryBot.define do
       tax_free { false }
     end
 
-    description { ['book', 'chocolate', 'pills', 'umbrella'].sample }
+    description { ['book', 'box of chocolates', 'headache pills', 'bottle of perfume'].sample }
     quantity { rand(1..10) }
     price { rand(1.00..10.00) }
     basket
 
     before(:create) do |line_item, evaluator|
-      line_item.description = 'umbrella' if evaluator.taxable
+      line_item.description = 'bottle of perfume' if evaluator.taxable
       line_item.description = 'book' if evaluator.tax_free
       line_item.description << ' imported' if evaluator.imported
     end
