@@ -166,4 +166,13 @@ tr {
 
 td, th {
   padding: 1px;
+  text-align: left;
+}
+
+th{
+  margin: auto;
+}
+
+table + a{
+  margin: auto;
 }
