@@ -1,3 +1,4 @@
+<% provide(:title, "New Basket") %>
 <%= form_for @basket, html: { multipart: true } do |form| %>
   <% if @basket.errors.any? %>
     <div id="error_explanation">
@@ -14,7 +15,7 @@
     <%= form.label :name %><br />
     <%= form.text_field :name %>
   </div>
-  
+
   <div class="field">
     <%= form.label :basket_items_file %>
     <%= form.file_field :basket_items_file, accept: 'text' %>

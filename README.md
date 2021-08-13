@@ -1,24 +1,57 @@
-# README
+# Rails Sales Taxes Kata
+## Description:
+This application will let you upload a text file, and will parse the contents to create a receipt with the adjusted prices due to their tax categories.
+![landing page link](https://user-images.githubusercontent.com/68167430/128925230-dc50d85b-5047-47fd-86c5-339ab2108733.png)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+The input text file will currently need to emulate the following:
+```
+1 book at 12.49
+1 music CD at 14.99
+1 chocolate bar at 0.85
+```
+or in terms of what each element in the string represents:
+```
+<quantity> <description> at <price>
+```
+user create functionality is currently limited to orders, but can be easily scaled up from this point.
 
-* Ruby version
+The output will be in the will similar to:
+![output image](https://user-images.githubusercontent.com/68167430/129260301-eef07e34-8277-4090-9ffc-a4c2f01b9c5f.png)
 
-* System dependencies
 
-* Configuration
+## Configuration
+* This application was built on Ruby version: 2.7.2
 
-* Database creation
+* Configuration:
+  1. git clone
+  2. bundle install
+  3. yarn install
+  4. rails db:setup
+  5. rails s
+  6. navigate to localhost:3000
+## Deploying
 
-* Database initialization
+* Setting up deployment to Heroku
+  1. login to heroku cli
+  2. heroku create <'YOUR-APP-NAME-HERE'>
+  3. git push heroku main
+  4. heroku run rake db:migrate
+  5. heroku run rake db:seed
+
+## Testing
 
 * How to run the test suite
+  1. git clone
+  2. bundle install
+  3. yarn install
+  4. rails db:setup
+  5.  bundle exec rspec
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+* Database creation: created and tested using psql and sqlite
+## Demo
 
-* ...
+* [Sample Application](https://sample-basker-reader.herokuapp.com/)
+
+Thanks for checking out this application!
