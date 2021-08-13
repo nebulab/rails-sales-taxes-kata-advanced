@@ -115,7 +115,7 @@ input {
     color: $state-danger-text;
   }
 }
-#basket_basket_items_file{
+#basket_basket_file{
   margin: auto
 }
 
@@ -166,4 +166,13 @@ tr {
 
 td, th {
   padding: 1px;
+  text-align: left;
+}
+
+th{
+  margin: auto;
+}
+
+table + a{
+  margin: auto;
 }

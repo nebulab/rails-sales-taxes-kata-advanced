@@ -3,6 +3,10 @@
 # frozen_string_literal: true
 
 class BasketReader
+  def self.file_type_not_allowed?(file)
+    file.content_type != 'text/plain'
+  end
+
   def self.read_basket(basket)
     basket_contents = File.read(basket).split("\n")
     parse_items(basket_contents)

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.thecatapi.com/v1/images/search
+    uri: https://api.thecatapi.com/v1/images/search?size=med
     body:
       encoding: US-ASCII
       string: ''
@@ -39,11 +39,11 @@ http_interactions:
       Expires:
       - Tue, 03 Jul 2001 06:00:00 GMT
       Last-Modified:
-      - Wed Aug 11 2021 02:18:41 GMT+0000 (Coordinated Universal Time)
+      - Fri Aug 13 2021 03:57:22 GMT+0000 (Coordinated Universal Time)
       Cache-Control:
       - post-check=0, pre-check=0
       Pagination-Count:
-      - '10418'
+      - '10419'
       Pagination-Page:
       - '0'
       Pagination-Limit:
@@ -53,17 +53,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       X-Response-Time:
-      - 135ms
+      - 189ms
       X-Cloud-Trace-Context:
-      - d7adaa78a71f8f8a410f39f9ea3ed458
+      - 9926f55126e6953b835eaf34a5aefcf8
       Date:
-      - Wed, 11 Aug 2021 02:18:41 GMT
+      - Fri, 13 Aug 2021 03:57:22 GMT
       Server:
       - Google Frontend
       Content-Length:
-      - '115'
+      - '101'
     body:
       encoding: UTF-8
-      string: '[{"breeds":[],"id":"oYRlo9UxZ","url":"https://cdn2.thecatapi.com/images/oYRlo9UxZ.png","width":2079,"height":2571}]'
-  recorded_at: Wed, 11 Aug 2021 02:18:41 GMT
+      string: '[{"breeds":[],"id":"dsa","url":"https://cdn2.thecatapi.com/images/dsa.jpg","width":640,"height":418}]'
+  recorded_at: Fri, 13 Aug 2021 03:57:22 GMT
 recorded_with: VCR 6.0.0

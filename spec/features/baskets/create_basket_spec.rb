@@ -9,7 +9,7 @@ RSpec.describe 'Basket Creation Page', type: :feature do
   describe 'I upload basket 2 list and click create' do
     it 'redirects me to the Basket show page with an itemized receipt' do
       visit new_basket_path
-      attach_file('basket[basket_items_file]', file_fixture('basket_2.txt'))
+      attach_file('basket[basket_file]', file_fixture('basket_2.txt'))
       click_button('Create')
 
       expect(page).to have_content('10.50')
@@ -22,7 +22,7 @@ RSpec.describe 'Basket Creation Page', type: :feature do
   describe 'I upload basket 1 list and click create' do
     it 'redirects me to the Basket show page with an itemized receipt' do
       visit new_basket_path
-      attach_file('basket[basket_items_file]', file_fixture('basket_1.txt'))
+      attach_file('basket[basket_file]', file_fixture('basket_1.txt'))
       click_button('Create')
 
       expect(page).to have_content('12.49')
@@ -36,7 +36,7 @@ RSpec.describe 'Basket Creation Page', type: :feature do
   describe 'I upload basket 3 list and click create' do
     it 'redirects me to the Basket show page with an itemized receipt' do
       visit new_basket_path
-      attach_file('basket[basket_items_file]', file_fixture('basket_3.txt'))
+      attach_file('basket[basket_file]', file_fixture('basket_3.txt'))
       click_button('Create')
 
       expect(page).to have_content('32.19')
@@ -51,7 +51,7 @@ RSpec.describe 'Basket Creation Page', type: :feature do
   describe 'I upload basket 4 with an invalid item in the list and click create' do
     it 'redirects me to the Basket create page with errors displayed' do
       visit new_basket_path
-      attach_file('basket[basket_items_file]', file_fixture('basket_4.txt'))
+      attach_file('basket[basket_file]', file_fixture('basket_4.txt'))
       click_button('Create')
       expect(current_path).to eq(new_basket_path)
       expect(page).to have_content('Line items is invalid')
@@ -61,7 +61,7 @@ RSpec.describe 'Basket Creation Page', type: :feature do
   describe 'I attempt to upload an invalid file format' do
     it 'redirects me to the Basket create page with errors displayed' do
       visit new_basket_path
-      attach_file('basket[basket_items_file]', file_fixture('basket.csv'))
+      attach_file('basket[basket_file]', file_fixture('basket.csv'))
       click_button('Create')
       expect(current_path).to eq(new_basket_path)
       expect(page).to have_content('File type not allowed')

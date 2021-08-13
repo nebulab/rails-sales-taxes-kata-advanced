@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.thecatapi.com/v1/images/search
+    uri: https://api.thecatapi.com/v1/images/search?size=med
     body:
       encoding: US-ASCII
       string: ''
@@ -39,7 +39,7 @@ http_interactions:
       Expires:
       - Tue, 03 Jul 2001 06:00:00 GMT
       Last-Modified:
-      - Wed Aug 11 2021 12:43:32 GMT+0000 (Coordinated Universal Time)
+      - Fri Aug 13 2021 02:22:46 GMT+0000 (Coordinated Universal Time)
       Cache-Control:
       - post-check=0, pre-check=0
       Pagination-Count:
@@ -53,83 +53,83 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       X-Response-Time:
-      - 275ms
+      - 131ms
       X-Cloud-Trace-Context:
-      - b6ff3a4a4c4eaf8b2228432ae7a3c05b
+      - 9d629f4781db730a49aae71dfce73776
       Date:
-      - Wed, 11 Aug 2021 12:43:33 GMT
-      Server:
-      - Google Frontend
-      Content-Length:
-      - '103'
-    body:
-      encoding: UTF-8
-      string: '[{"breeds":[],"id":"dbs","url":"https://cdn2.thecatapi.com/images/dbs.jpg","width":3888,"height":2592}]'
-  recorded_at: Wed, 11 Aug 2021 12:43:32 GMT
-- request:
-    method: get
-    uri: https://api.thecatapi.com/v1/images/search
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-      Host:
-      - api.thecatapi.com
-      X-Api-Key:
-      - "<DONT_USE_MY_API_KEY>"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Dns-Prefetch-Control:
-      - 'off'
-      X-Frame-Options:
-      - SAMEORIGIN
-      Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains
-      X-Download-Options:
-      - noopen
-      X-Content-Type-Options:
-      - nosniff
-      X-Xss-Protection:
-      - 1; mode=block
-      Vary:
-      - Origin
-      Expires:
-      - Tue, 03 Jul 2001 06:00:00 GMT
-      Last-Modified:
-      - Wed Aug 11 2021 12:43:33 GMT+0000 (Coordinated Universal Time)
-      Cache-Control:
-      - post-check=0, pre-check=0
-      Pagination-Count:
-      - '10419'
-      Pagination-Page:
-      - '0'
-      Pagination-Limit:
-      - '1'
-      Access-Control-Expose-Headers:
-      - Pagination-Count, Pagination-Page, Pagination-Limit
-      Content-Type:
-      - application/json; charset=utf-8
-      X-Response-Time:
-      - 194ms
-      X-Cloud-Trace-Context:
-      - 31a2e2cb376ca3537e28519f762d1483
-      Date:
-      - Wed, 11 Aug 2021 12:43:34 GMT
+      - Fri, 13 Aug 2021 02:22:46 GMT
       Server:
       - Google Frontend
       Content-Length:
       - '101'
     body:
       encoding: UTF-8
-      string: '[{"breeds":[],"id":"dl4","url":"https://cdn2.thecatapi.com/images/dl4.jpg","width":612,"height":612}]'
-  recorded_at: Wed, 11 Aug 2021 12:43:33 GMT
+      string: '[{"breeds":[],"id":"4lr","url":"https://cdn2.thecatapi.com/images/4lr.gif","width":200,"height":200}]'
+  recorded_at: Fri, 13 Aug 2021 02:22:46 GMT
+- request:
+    method: get
+    uri: https://api.thecatapi.com/v1/images/search?size=med
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.thecatapi.com
+      X-Api-Key:
+      - "<DONT_USE_MY_API_KEY>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Vary:
+      - Origin
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      Last-Modified:
+      - Fri Aug 13 2021 02:22:47 GMT+0000 (Coordinated Universal Time)
+      Cache-Control:
+      - post-check=0, pre-check=0
+      Pagination-Count:
+      - '10419'
+      Pagination-Page:
+      - '0'
+      Pagination-Limit:
+      - '1'
+      Access-Control-Expose-Headers:
+      - Pagination-Count, Pagination-Page, Pagination-Limit
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Response-Time:
+      - 199ms
+      X-Cloud-Trace-Context:
+      - c4df65d7b5acf6c2d4d68a467b811029
+      Date:
+      - Fri, 13 Aug 2021 02:22:47 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '101'
+    body:
+      encoding: UTF-8
+      string: '[{"breeds":[],"id":"2a3","url":"https://cdn2.thecatapi.com/images/2a3.jpg","width":325,"height":300}]'
+  recorded_at: Fri, 13 Aug 2021 02:22:47 GMT
 recorded_with: VCR 6.0.0
