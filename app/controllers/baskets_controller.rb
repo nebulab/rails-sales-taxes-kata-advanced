@@ -2,6 +2,7 @@
 
 class BasketsController < ApplicationController
   before_action :authenticate_user!
+  before_action :correct_user, only: [:show, :destroy]
 
   def index
     @baskets = current_user.baskets.order(created_at: :desc)
@@ -50,5 +51,10 @@ class BasketsController < ApplicationController
 
   def basket_params
     params.require(:basket).permit(:name, :basket_items_file)
+  end
+
+  def correct_user
+    @basket = current_user.baskets.find_by(id: params[:id])
+    redirect_to root_url if @basket.nil?
   end
 end
