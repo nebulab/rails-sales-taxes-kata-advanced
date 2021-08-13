@@ -1,5 +1,5 @@
 <tr class="basket-row">
   <td class='basket-column'><%= "Basket ##{basket.id}:" %></td>
   <td class='basket-column'><%= link_to basket.name, basket_path(basket) %></td>
-  <td class='basket-column'><%= link_to 'Delete Basket', basket,  method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <td class='basket-column'><%= link_to 'Delete', basket,  method: :delete, data: { confirm: 'Are you sure?' } %></td>
 </tr>
