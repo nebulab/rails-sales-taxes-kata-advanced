@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 RSpec.describe 'Basket Show Page', type: :feature do
-
   describe "when I try to visit another user's basket receipt" do
     let(:user) { create(:user) }
     let(:other_user) { create(:basket, :with_items).user }
