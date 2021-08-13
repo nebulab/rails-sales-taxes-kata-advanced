@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   devise_for :users
   resources :baskets, except: [:update, :edit]
 
-  root 'welcome#index'
+  root 'static_pages#welcome'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

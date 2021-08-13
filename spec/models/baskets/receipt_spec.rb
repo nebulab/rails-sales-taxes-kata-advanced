@@ -45,7 +45,7 @@ RSpec.describe Baskets::Receipt do
   describe 'print_total' do
     it 'returns the formated basket total amount' do
       expect(receipt.print_total).to be_a(String)
-      expect(receipt.print_total).to match(/^[a-zA-z]* [a-zA-z]*: [0-9]*.[0-9]{2}\z/)
+      expect(receipt.print_total).to match(/^[a-zA-z]*: [0-9]*.[0-9]{2}\z/)
       expect(receipt.total).to eq(43.00)
     end
   end
