@@ -67,4 +67,13 @@ RSpec.describe 'Basket Creation Page', type: :feature do
       expect(page).to have_content('File type not allowed')
     end
   end
+
+  describe 'I attempt to create a basket without uploading a file' do
+    it 'redirects me to the Basket create page with errors displayed' do
+      visit new_basket_path
+      click_button('Create')
+      expect(current_path).to eq(new_basket_path)
+      expect(page).to have_content('Please select a file to upload')
+    end
+  end
 end
