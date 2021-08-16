@@ -51,7 +51,7 @@ line_item_descriptions = {'book' => 'Book',
   4. `rails db:setup`
   5. `bundle exec figaro install`
   6. navigate to `/config/application.yml` and create variable CAT_API_KEY: <'Your-api-key-here'>
-  7. `bundle exec rspec` - there should be 30 passing examples
+  7. `bundle exec rspec` - there should be 31 passing examples
   8. `rails s`
   9. `navigate to localhost:3000`
 ## Deploying

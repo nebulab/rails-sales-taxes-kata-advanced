@@ -3,7 +3,7 @@
 class BasketsController < ApplicationController
   before_action :authenticate_user!
   before_action :correct_user, only: [:show, :destroy]
-  before_action :check_file_type, only: [:create]
+  before_action :check_no_file, :check_file_type, only: [:create]
 
   def index
     @baskets = current_user.baskets.order(created_at: :desc)
@@ -46,6 +46,13 @@ class BasketsController < ApplicationController
   def correct_user
     @basket = current_user.baskets.find_by(id: params[:id])
     redirect_to root_url if @basket.nil?
+  end
+
+  def check_no_file
+    if basket_params[:basket_file].nil?
+      flash[:error] = 'Please select a file to upload.'
+      redirect_to new_basket_path
+    end
   end
 
   def check_file_type
