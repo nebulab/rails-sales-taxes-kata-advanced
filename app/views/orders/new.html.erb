@@ -1,2 +1,8 @@
 <%= render 'layouts/header' %>
 
+<h1>Create new receipt</h1>
+
+<%= form_with model: @order do |f|  %>
+  <%= f.file_field :basket_data %>
+  <%= f.submit 'Upload' %>
+<% end %>
