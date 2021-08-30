@@ -2,6 +2,8 @@
 
 class OrdersController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_order, only: [:show]
+
   def index
     @orders = current_user.orders
   end
@@ -14,5 +16,6 @@ class OrdersController < ApplicationController
   def order_params
   end
   def set_order
+    @order = Order.find(params[:id])
   end
 end

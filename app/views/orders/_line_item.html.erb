@@ -1,0 +1,5 @@
+<tr>
+  <td><%= line_item.quantity %></td>
+  <td><%= line_item.product.name %>:</td>
+  <td><%= number_with_precision((line_item.product.price + line_item.product.tax), :precision => 2) %></td>
+</tr>
