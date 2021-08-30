@@ -33,11 +33,13 @@ gem 'rubocop-rails', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # The RSpec testing framework
   gem 'rspec-rails'
   # Capybara, the library that allows us to interact with the browser using Ruby
   gem 'capybara'
+  gem 'factory_bot_rails'
+  gem 'selenium-webdriver'
   gem 'shoulda-matchers', '~> 4.5.1'
 end
 
@@ -46,8 +48,8 @@ group :development do
   gem 'web-console', '>= 4.1.0'
   # Display performance information such as SQL time and flame graphs for each request in your browser.
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
-  gem 'rack-mini-profiler', '~> 2.0'
   gem 'listen', '~> 3.3'
+  gem 'rack-mini-profiler', '~> 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
