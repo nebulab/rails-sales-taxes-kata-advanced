@@ -1,2 +1,10 @@
 <%= render 'layouts/header' %>
 
+<h2>Your Past Receipts</h2>
+<% if @orders.any? %>
+  <% @orders.each do |order| %>
+    <%= link_to "Number #{order.id}", order %><br/>
+  <% end %>
+<% else %>
+  <div><%= link_to 'Upload', new_order_path %> your order to create a receipt</div>
+<% end %>
