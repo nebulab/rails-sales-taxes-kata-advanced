@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_23_104451) do
+ActiveRecord::Schema.define(version: 2021_08_26_082241) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "line_items", force: :cascade do |t|
+    t.integer "quantity"
+    t.bigint "product_id", null: false
+    t.bigint "order_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["order_id"], name: "index_line_items_on_order_id"
+    t.index ["product_id"], name: "index_line_items_on_product_id"
+  end
 
   create_table "orders", force: :cascade do |t|
     t.decimal "total", precision: 10, scale: 2, null: false
@@ -22,6 +32,14 @@ ActiveRecord::Schema.define(version: 2021_08_23_104451) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_orders_on_user_id"
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.decimal "price", precision: 10, scale: 2, null: false
+    t.decimal "tax", precision: 10, scale: 2, default: "0.0", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -33,5 +51,7 @@ ActiveRecord::Schema.define(version: 2021_08_23_104451) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "line_items", "orders"
+  add_foreign_key "line_items", "products"
   add_foreign_key "orders", "users"
 end
